@@ -21,9 +21,9 @@
 body {
   margin: 0;
   background: var(--bg);
-  color:var(--ink);
+  color: var(--ink);
   font-family: "Zen Kaku Gothic New", sans-serif;
-  -webkit-front-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 h2, h3, p, ul {
@@ -34,7 +34,7 @@ h2, h3, p, ul {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   padding: 18px 20px;
   background: var(--card);
   border-bottom: 1px solid var(--border);
@@ -65,7 +65,7 @@ h2, h3, p, ul {
 
 /* 共通ラベル（00－Aboutなど） */
 .label {
-  font-size:12px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--accent);
 }
@@ -90,7 +90,7 @@ h2, h3, p, ul {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding: 0 72px 48px;
+  padding: 0 20px 48px;
 }
 
 .works-head {
@@ -108,7 +108,7 @@ h2, h3, p, ul {
 .works-head-title {
   display: flex;
   flex-direction: column;
-  gap: 4px
+  gap: 4px;
 }
 
 .works-head h2 {
@@ -140,6 +140,7 @@ h2, h3, p, ul {
   border-radius: 6px;
   overflow: hidden;
   transition: box-shadow 0.2s;
+  height: 100%;
 }
 
 .card-img {
@@ -256,10 +257,11 @@ h2, h3, p, ul {
 
   .works {
     gap: 24px;
+    padding: 0 72px 72px;
   }
 
   .works-head {
-    align-items:baseline;
+    align-items: baseline;
     padding-top: 16px;
   }
 
