@@ -292,4 +292,11 @@ h2, h3, p, ul {
     line-height: 1.85;
   }
 
+    .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 64px;
+    font-size: 13px;
+  }
 }
