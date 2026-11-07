@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A's Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-title">
+            <span class="header-name">あ's</span>
+            <span class="header-sub"> Portfolio</span>
+        </div>
+        <span class="header-role">2026</span>
+    </header>
+
+    <main>
+        <!-- セクション１：自己紹介 -->
+        <section class="about">
+            <p class="label">00 － About</p>
+            <p class="about-text">新卒で市役所に入庁し、9年間勤務。2024年からは図書館にて図書館システム運用・保守、図書館DX推進、次期システム要件定義等を担当。退職後、データアナリスト・データサイエンティストを目指し、プログラミングスクール「RUNTEQ」にてPythonを中心に学習。統計学・SQLについても独学で学習中。</p>
+        </section>
+        <!-- セクション２：データ分析記事 -->
+        <section class="works">
+            <div class="works-head">
+                <div class="works-head-title">
+                    <p class="label">01 － Analysis</p>
+                    <h2>データ分析記事</h2>
+                </div>
+                <span class="works-count">2 articles</span>
+            </div>
+            <div class="card-list">
+                <a href="https://zenn.dev/ohagi_2428/articles/96994ee05535ff" class="card-link" alt="Zenn記事のリンク">
+                    <article class="card">
+                        <img class="card-img" src="images/library_thumbnail.png" alt="市民1人あたりの資料費と貸出数の散布図と回帰直線">
+                        <div class="card-body">
+                            <p class="card-kind">ZENN ARTICLE</p>
+                            <h3>「財政力があれば図書館は充実する」は本当か――544自治体の探索的データ分析</h3>
+                            <p class="card-text">人口規模5万人以上自治体の公共図書館データ544件を対象に、図書館サービスに影響を与える要因について、相関・回帰・残差などの観点から比較・分析を行ったもの。</p>
+                            <ul class="tags">
+                                <li>SQL</li>
+                                <li>Python</li>
+                                <li>pandas</li>
+                                <li>matplotlib</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+                <a href="https://zenn.dev/ohagi_2428/articles/81d55ec231f370" class="card-link" alt="Zennの記事リンク">
+                    <article class="card">
+                        <img class="card-img" src="images/washoku_thumbnail.png" alt="東京の駅の分布図。和食店の出店余地がある駅を色で示している">
+                        <div class="card-body">
+                            <p class="card-kind">ZENN ARTICLE</p>
+                            <h3>東京567駅における和食店の出店余地分析</h3>
+                            <p class="card-text">東京都内に和食店を出店することを想定し、「駅ごとの和食店数を説明するモデル」を作成することで、「和食店の出店余地がある都内の駅」を提示することを目的とした分析。</p>
+                            <ul class="tags">
+                                <li>Python</li>
+                                <li>pandas</li>
+                                <li>matplotlib</li>
+                                <li>SciPy</li>
+                                <li>scikit-learn</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+        <!-- セクション３：開発アプリ -->
+        <section class="works">
+            <div class="works-head">
+                <div class="works-head-title">
+                    <p class="label">02 － Apps</p>
+                    <h2>開発アプリ</h2>
+                </div>
+                <span class="works-count">2 apps</span>
+            </div>
+            <div class="card-list">
+                <a href="https://teichaku-web-tvy3.onrender.com/" class="card-link">
+                    <article class="card">
+                        <img class="card-img" src="images/teichaku-notebook-img.png" alt="アプリ「定着ノート」の画面イメージ">
+                        <div class="card-body">
+                            <p class="card-kind">MINI APP</p>
+                            <h3>定着ノート</h3>
+                            <p class="card-text">学習効率化アプリ。1日1枚のノートに学習内容を記録すると、作成から1日後・1週間後・2週間後・1ヶ月後に、復習するノートを1クリックで表示できる。Markdown記法に対応。</p>
+                            <ul class="tags">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>HTML</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+                <a href="https://voice-schedule-app-web.onrender.com/" class="card-link" alt="アプリ「ときよみ★」のリンク">
+                    <article class="card">
+                        <img class="card-img" src="images/tokiyomi-img.png" alt="アプリ「ときよみ★」イメージ">
+                        <div class="card-body">
+                            <p class="card-kind">APP</p>
+                            <h3>ときよみ★</h3>
+                            <p class="card-text">タスク管理アプリ。スケジュールの入力・実行を音声により行うことができる。キャラクターに見守られながら効率的にタスクを進められる。</p>
+                            <ul class="tags">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>HTML</li>
+                                <li>JavaScript</li>
+                                <li>OpenAI API</li>
+                                <li>Gemini API</li>
+                            </ul>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <a href="">github.com</a>
+        <small></small>
+    </footer>
+
+</body>
+</html>

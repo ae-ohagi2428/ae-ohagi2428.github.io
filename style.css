@@ -1,0 +1,293 @@
+/* 色 */
+:root {
+  --bg: #f5f3f8;          /* ページ背景 */
+  --card: #ffffff;        /* カード背景 */
+  --ink: #2a2433;         /* 見出し・フッター背景 */
+  --text: #4b4357;        /* 本文 */
+  --muted: #655d70;       /* 補足文字 */
+  --accent: #6a4c93;      /* ラベル・リンク */
+  --tag-text: #3e3649;    /* タグ文字 */
+  --border: #e2dcea;      /* 枠線 */
+  --line: #d0c7de;        /* 区切り線・タグ枠 */
+  --footer-text: #d9d1e4; /* フッター文字 */
+  --img-bg: #efebf4;      /* 画像の読み込み前の色 */
+}
+
+/* 基本 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color:var(--ink);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  -webkit-front-smoothing: antialiased;
+}
+
+h2, h3, p, ul {
+  margin: 0;
+}
+
+/* ヘッダー部分 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 18px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.header-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.header-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.header-role {
+  display: none;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* 共通ラベル（00－Aboutなど） */
+.label {
+  font-size:12px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* 00 - About（自己紹介） */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 44px 20px;
+}
+
+.about-text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 720px;
+}
+
+/* 01 and 02 作品セクション */
+.works {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 72px 48px;
+}
+
+.works-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 14px;
+  border-top: 1px solid var(--line); 
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.works-head-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px
+}
+
+.works-head h2 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.works-count {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* カード */
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 5vw, 72px);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--img-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+}
+
+.card-kind {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.card h3 {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 3px 8px;
+  font-size: 12px;
+  color: var(--tag-text);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(42, 36, 51, 0.12);
+}
+
+/* フッター */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 20px;
+  background: var(--ink);
+  color: var(--footer-text);
+  font-size: 12px;
+}
+
+.footer a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  opacity: 0.75;
+}
+
+/* PC画面（画面幅768px以上） */
+@media (min-width: 768px) {
+  .header {
+    padding: 24px 64px;
+  }
+  .header-name {
+    font-size: 20px;
+  }
+
+  .header-sub {
+    font-size: 13px;
+  }
+
+  .header-role {
+    display: block;
+  }
+
+  .label {
+    font-size: 13px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 64px 64px 48px;
+  }
+
+  .about-text {
+    font-size: 17px;
+  }
+
+  .works {
+    gap: 24px;
+  }
+
+  .works-head {
+    align-items:baseline;
+    padding-top: 16px;
+  }
+
+  .works-head-title {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .works-head h2 {
+    font-size: 24px;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-body {
+    gap: 12px;
+    padding: 24px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card-text {
+    line-height: 1.85;
+  }
+
+}
